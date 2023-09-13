@@ -1,0 +1,998 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Define your color scheme */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Header Styles */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 20px;
+    padding-right: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: pink;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: pink;
+    text-align: center;
+    
+}
+
+.banner img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Box Styles */
+.box {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: deeppink;
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: pink;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 20px;
+    border: 6px solid white;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Section Styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(P1280075-01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    align-items: center;
+    display: flex;
+}
+
+main .main-intro h1 {
+    font-size: 46px;
+    line-height: 56px;
+    padding-top: 40px;
+    padding-left: 40px;
+    font-family: serif;
+}
+
+main .main-intro p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 40px;
+    font-family: serif;
+    font-weight: 800;
+}
+
+main .main-intro a {
+    font-size: 18px;
+    display: inline-block;
+    background-color: pink;
+    padding: 10px 20px;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-left: 40px;
+}
+
+/* Jordan Section Styles */
+.jordyn {
+    background: pink;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    color: black;
+    font-size: 25px;
+    position: relative;
+    border-bottom: 3px solid black;
+    margin-bottom: 18px;
+    width: 80%;
+    font-family: serif;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.second-paragraph {
+    font-family: serif;
+    font-size: 15px;
+    color: black;
+    width: 80%;
+    margin-left: 80px;
+}
+
+.ultimate {
+    height: 400px;
+    width: 400px;
+    margin: 30px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 80px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: black;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    left: 0;
+    right: 0;
+}
+
+.footer-content h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: white;
+    margin-top: 18px;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 16px auto;
+    line-height: 28px;
+    font-size: 22px;
+    color: white;
+}
+
+#socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+#socials li {
+    margin: 0 10px;
+}
+
+#socials a {
+    text-decoration: none;
+    color: white;
+}
+
+#socials a i {
+    font-size: 2.2rem;
+    transition: color .4s ease;
+}
+
+#socials a:hover i {
+    color: pink;
+}
+
+.footer-bottom {
+    background: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    /* Header Styles */
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .banner img {
+        height: auto;
+    }
+
+    /* Box Styles */
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Hero Section Styles */
+    main .main-intro h1 {
+        font-size: 32px;
+        line-height: 42px;
+        padding-top: 20px;
+        padding-left: 15px;
+    }
+
+    main .main-intro p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 15px;
+    }
+
+    main .main-intro a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    /* Jordan Section Styles */
+    h2 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .second-paragraph {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .ultimate {
+        height: 250px;
+        width: 250px;
+        margin: 20px;
+        margin-right: 20px;
+    }
+
+    /* About Us Section Styles */
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-us .card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .about-us .card .imgBx {
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .about-us .card .card-content {
+        top: auto;
+        height: auto;
+    }
+
+    /* Footer Styles */
+    .footer-content h3 {
+        font-size: 2rem;
+    }
+
+    .footer-content p {
+        font-size: 18px;
+    }
+
+    #socials {
+        margin: 10px 0 20px 0;
+    }
+
+    #socials li {
+        margin: 0 5px;
+    }
+
+    #socials a i {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Header Styles */
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .nav-links ul {
+        padding-top: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Hero Section Styles */
+    main .main-intro h1 {
+        font-size: 24px;
+        line-height: 34px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    main .main-intro p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+
+    main .main-intro a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    /* Jordan Section Styles */
+    h2 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .second-paragraph {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .ultimate {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        margin-right: 10px;
+    }
+
+    /* About Us Section Styles */
+    .about-us .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-us .card .imgBx {
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .about-us .card .card-content {
+        top: auto;
+        height: auto;
+    }
+
+    /* Footer Styles */
+    .footer-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content p {
+        font-size: 16px;
+    }
+
+    #socials {
+        margin: 10px 0 20px 0;
+    }
+
+    #socials li {
+        margin: 0 5px;
+    }
+
+    #socials a i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Social Icons Styles */
+#socials a:hover i {
+    color: pink;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    background: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 18px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* Show Form Styles */
+#show-form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: pink;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form Elements Styles */
+form {
+    margin-top: 10px;
+}
+
+label,
+input,
+textarea,
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h4 {
+    font-family: serif;
+    font-size: 2.2rem;
+}
+
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define your color scheme */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: pink;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 66px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: serif;
+    font-weight: 500;
+}
+
+/* Media Container Styles */
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.media-item {
+    margin: 8px;
+    max-width: 70%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: fill;
+    position: relative;
+}
+
+/* Footer Styles */
+footer {
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .media-item {
+        max-width: 100%;
+    }
+}
+
+/* About Us Section Styles */
+.about-us {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+    padding: 40px 34px;
+}
+
+.about-us .card {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background: pink;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.about-us .card:hover {
+    height: 400px;
+}
+
+.about-us .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: whitesmoke;
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.about-us .card:hover .imgBx {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.about-us .card .imgBx video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .card .card-content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.about-us .card:hover .card-content {
+    top: 130px;
+    height: 250px;
+}
+
+.about-us .card .card-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.about-us .card .card-content p {
+    color: white;
+    padding: 12px 25px;
+    font-weight: 500;
+}
+
+/* Responsive Styles for About Us Section */
+@media screen and (max-width: 768px) {
+    .about-us .card {
+        width: 100%;
+    }
+
+    
+
+    .banner img {
+        height: auto;
+        max-width: 100%;
+        padding-top: 30px;
+    }
+
+    .banner {
+        background-color: pink;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    main .main-intro h1 {
+        font-size: 46px;
+        line-height: 56px;
+        padding-left: 40px;
+        font-family: serif;
+    }
+
+    main .main-intro p {
+        font-size: 18px;
+        line-height: 26px;
+        padding-left: 40px;
+        font-family: serif;
+        font-weight: 800;
+    }
+
+    main .main-intro a {
+        font-size: 18px;
+        display: none;
+        background-color: pink;
+        padding: 10px 20px;
+        width: fit-content;
+        text-decoration: none;
+        border-radius: 15px;
+        margin-left: 40px;
+    }
+
+    .jordyn {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduce font size */
+        width: 90%; /* Adjust width */
+        margin-left: 10px; /* Reduce left margin */
+        margin-right: 10px; /* Reduce right margin */
+        margin-top: 20px;
+    }
+
+    .second-paragraph {
+        font-size: 18px; /* Reduce font size */
+        width: 90%; /* Adjust width */
+        margin-left: 10px; /* Reduce left margin */
+        margin-right: 10px; /* Reduce right margin */
+    }
+
+    .ultimate {
+        height: auto; /* Allow the image to adjust its height */
+        width: 100%; /* Full width for smaller screens */
+        margin: 20px 0; /* Adjust margin */
+    }
+
+    /* About Us Section Styles */
+.about-us {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+    padding: 40px 34px;
+}
+
+.about-us .card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: pink;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.about-us .card:hover {
+    height: 400px;
+}
+
+.about-us .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 220px;
+    background: whitesmoke;
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.about-us .card:hover .imgBx {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.about-us .card .imgBx video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .card .card-content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.about-us .card:hover .card-content {
+    top: 130px;
+    height: 250px;
+    
+}
+
+.about-us .card .card-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:black;
+}
+
+.about-us .card .card-content p {
+    color: black;
+    padding: 12px 25px;
+    font-weight: 500;
+}
+    .about-us .card .imgBx {
+        width: 100%;
+    }
+
+    .content img {
+    display: none;
+    }
+
+    .box {
+        display: none;
+    }
+
+    footer {
+        background-color: black;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: black;
+    
+        left: 0;
+        right: 0;
+    }
+    
+    .footer-content h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 1.9rem;
+        color: white;
+        margin-top: 18px;
+    }
+    
+    .footer-content p {
+        width: 100%;
+        margin: 16px auto;
+        line-height: 28px;
+        font-size: 22px;
+        color: white;
+    }
+    
+
+    /* Display Mobile Menu on Small Screens */
+    .mobile-menu-icon {
+      display: block; /* Show mobile menu icon */
+    }
+  
+    .nav-links {
+      display: none; /* Hide navigation links */
+    }
+  
+    /* Show navigation links when mobile menu is open */
+    .nav-links.active {
+      display: block;
+    }
+  
+    /* Style the mobile menu icon (e.g., hamburger icon) */
+    .mobile-menu-icon i {
+      font-size: 24px; /* Adjust size as needed */
+    }
+
+    /* Style the mobile menu icon (e.g., hamburger icon) */
+.mobile-menu-icon {
+    cursor: pointer;
+  }
+
+  
+  .mobile-menu-icon i {
+    font-size: 24px; /* Adjust size as needed */
+    color: #333; /* Icon color */
+    margin-right: 15px;
+    display: block;
+  }
+  
+  }
+    
+  @media screen and (min-width: 769px) {
+    .mobile-menu-icon i {
+        display: none;
+    }
+}
+
